@@ -8,7 +8,7 @@ function Particle(){
         console.log(engine);
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
+        // starting from v2 you can add only the features you need reducing the bundle size //#151515
         await loadFull(engine);
     }, []);
 
@@ -23,14 +23,14 @@ function Particle(){
             options={{
                 background: {
                     color: {
-                        value: "#0d47a1",
+                        value: "#151515", 
                     },
                 },
                 fpsLimit: 120,
                 interactivity: {
                     events: {
                         onClick: {
-                            enable: true,
+                            enable: false,
                             mode: "push",
                         },
                         onHover: {
@@ -61,7 +61,7 @@ function Particle(){
                         width: 1,
                     },
                     collisions: {
-                        enable: true,
+                        enable: false,
                     },
                     move: {
                         directions: "none",
@@ -78,7 +78,7 @@ function Particle(){
                             enable: true,
                             area: 800,
                         },
-                        value: 100,
+                        value: 50,
                     },
                     opacity: {
                         value: 0.5,
@@ -90,7 +90,7 @@ function Particle(){
                         value: { min: 1, max: 5 },
                     },
                 },
-                detectRetina: true,
+                detectRetina: false,
             }}
         />
     );

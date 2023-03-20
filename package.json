@@ -10,7 +10,7 @@
     "bootstrap": "^5.2.3",
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "framer-motion": "^10.3.2",
+    "framer-motion": "^10.5.0",
     "nodemailer": "^6.7.5",
     "particlesjs": "^2.2.3",
     "react": "^18.1.0",
@@ -27,6 +27,8 @@
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.9.3",
+    "react-vertical-timeline-component": "^3.4.0",
+    "sass": "^1.59.3",
     "tsparticles": "^2.9.3",
     "web-vitals": "^2.1.4"
   },
@@ -53,5 +55,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "sass-loader": "^13.2.0"
   }
 }
