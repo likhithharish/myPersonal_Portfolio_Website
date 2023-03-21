@@ -37,10 +37,10 @@ export const Contact = () => {
     setButtonText("Sending...");
     emailjs
       .sendForm(
-        "service_fs30swa",
-        "template_x16j7qt",
+        process.env.REACT_APP_MAIL_SERVICE_KEY,
+        process.env.REACT_APP_MAIL_TEMPLATE_KEY,
         form.current,
-        "sukyjZgriJwvR0Z8g"
+        process.env.REACT_APP_MAIL_API_KEY
       )
       .then(
         (result) => {
