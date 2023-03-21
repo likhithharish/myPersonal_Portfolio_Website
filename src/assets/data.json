@@ -1,0 +1,43 @@
+[
+  {
+    "nav1": "Home",
+    "nav2": "Skills",
+    "nav3": "Experiences",
+    "nav4": "Projects",
+    "nav5": "Resume",
+    "linkedin": "https://www.linkedin.com/in/likhith-harish/",
+    "github": "https://github.com/likhithharish"
+  },
+  {
+    "name": "Likhith",
+    "intropara": "I am a Software Engineer with 3+ years of experience in Android and Web development and a love for creating innovative and responsive applications. When I'm not CODING, you can find me solving rubiks cube, enjoying a cup of coffee with music and exploring. Also, I'm an Audiophile."
+  },
+  {
+    "title": "skills",
+    "desc": "My complete skillsets in Full-Stack Web, FrontEnd, BackEnd & Android.",
+    "desc2": "Also with quite a niche in AI, Machine Learning & Image Processing/ Computer Vision.",
+    "s1": "Java",
+    "s2": "Python",
+    "s3": "Kotlin",
+    "s4": "React",
+    "s5": "SQL",
+    "s6": "HTML",
+    "s7": "CSS",
+    "s8": "Javascript",
+    "s9": "Typescript",
+    "s10": "Bootstrap",
+    "s11": "Git & Version Control",
+    "s12": "Tensorflow"
+  },
+  {
+    "title": "Experiences",
+    "exp1": "Tata Consultancy Services",
+    "role1": "Senior Software Engineer",
+    "date1": "Sep.2019 - Jun.2022",
+    "date2": "May.2018 - Oct.2018",
+    "desc1": "A full stack developer, handled projects in Android and Web. Gained strong expertise in designing banking and financial applications. My Strong suit included writing clean, crisp code with less redundancy.",
+    "exp2": "Tata Motors",
+    "role2": "Machine Learning Intern",
+    "desc2": "As an intern, worked on the machine learning project with focus on acheiving zero defects on assembly by performing predictive analysis on various sensory data."
+  }
+]

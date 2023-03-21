@@ -12,7 +12,7 @@ import bootstrap from "../assets/img/skills/bootstrap.svg";
 import git from "../assets/img/skills/git.svg";
 import tensorflow from "../assets/img/skills/tensorflow.svg";
 import "react-multi-carousel/lib/styles.css";
-import colorSharp from "../assets/img/color-sharp.png";
+import Records from "../assets/data.json";
 
 export const Skills = () => {
   const responsive = {
@@ -41,11 +41,11 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>Skills</h2>
+              <h2>{Records[2].title}</h2>
               <p>
-                My complete skillsets in Full-Stack Web, FrontEnd, BackEnd &
-                Android.<br></br>Also with quite a niche in AI, Machine Learning
-                & Image Processing/ Computer Vision.
+                {Records[2].desc}
+                <br></br>
+                {Records[2].desc2}
               </p>
               <Carousel
                 partialVisible={true}
@@ -56,58 +56,57 @@ export const Skills = () => {
               >
                 <div className="item">
                   <img src={java} alt="Image" />
-                  <h5>Java</h5>
+                  <h5>{Records[2].s1}</h5>
                 </div>
                 <div className="item">
                   <img src={python} alt="Image" />
-                  <h5>Python</h5>
+                  <h5>{Records[2].s2}</h5>
                 </div>
                 <div className="item">
                   <img src={kotlin} alt="Image" />
-                  <h5>Kotlin</h5>
+                  <h5>{Records[2].s3}</h5>
                 </div>
                 <div className="item">
                   <img src={react} alt="Image" />
-                  <h5>React</h5>
+                  <h5>{Records[2].s4}</h5>
                 </div>
                 <div className="item">
                   <img src={sql} alt="Image" />
-                  <h5>SQL</h5>
+                  <h5>{Records[2].s5}</h5>
                 </div>
                 <div className="item">
                   <img src={html} alt="Image" />
-                  <h5>HTML</h5>
+                  <h5>{Records[2].s6}</h5>
                 </div>
                 <div className="item">
                   <img src={css} alt="Image" />
-                  <h5>CSS</h5>
+                  <h5>{Records[2].s7}</h5>
                 </div>
                 <div className="item">
                   <img src={javascript} alt="Image" />
-                  <h5>JavaScript</h5>
+                  <h5>{Records[2].s8}</h5>
                 </div>
                 <div className="item">
                   <img src={typescript} alt="Image" />
-                  <h5>TypeScript</h5>
+                  <h5>{Records[2].s9}</h5>
                 </div>
                 <div className="item">
                   <img src={bootstrap} alt="Image" />
-                  <h5>BootStrap</h5>
+                  <h5>{Records[2].s10}</h5>
                 </div>
                 <div className="item">
                   <img src={git} alt="Image" />
-                  <h5>Git & Version Control</h5>
+                  <h5>{Records[2].s11}</h5>
                 </div>
                 <div className="item">
                   <img src={tensorflow} alt="Image" />
-                  <h5>Tensorflow</h5>
+                  <h5>{Records[2].s12}</h5>
                 </div>
               </Carousel>
             </div>
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };

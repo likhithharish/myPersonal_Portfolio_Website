@@ -2,8 +2,10 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import notesApp from "../assets/img/notesApp.svg";
 import projImg2 from "../assets/img/collectionAndroid.svg";
-import projImg3 from "../assets/img/project-img3.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import projImg3 from "../assets/img/wip.svg";
+import restloc from "../assets/img/recommendationloc.svg";
+import imageproc from "../assets/img/imageproc.svg";
+import ml from "../assets/img/ml.svg";
 import "animate.css";
 
 export const Projects = () => {
@@ -11,19 +13,19 @@ export const Projects = () => {
     {
       title: "NoteTaking Android App",
       description:
-        "Jetpack compose, Room, Firebase, HILT, MVVM/Clean Architecture.",
+        "App built using Jetpack compose, Room, Firebase, HILT, MVVM/Clean Architecture.",
       imgUrl: notesApp,
       url: "https://github.com/likhithharish/NoteTakingApp",
     },
     {
-      title: "Android Repo",
-      description: "Cummulative collection of Android topics and code.",
+      title: "Complete Android Repo",
+      description: "A Cummulative collection of Android topics with code.",
       imgUrl: projImg2,
       url: "https://github.com/likhithharish/Android",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Food Order Website",
+      description: "Work in Progress",
       imgUrl: projImg3,
       url: "",
     },
@@ -31,23 +33,25 @@ export const Projects = () => {
 
   const secondProjects = [
     {
-      title: "NoteTaking Android App",
+      title: "Restaurant Recommendation",
       description:
-        "Jetpack compose, Room, Firebase, HILT, MVVM/Clean Architecture.",
-      imgUrl: notesApp,
-      url: "https://github.com/likhithharish/NoteTakingApp",
+        "A location Recommendation system for opening a new restaurant in a city.",
+      imgUrl: restloc,
+      url: "https://github.com/likhithharish/Restaurant-Recommendation-System",
     },
     {
-      title: "Android Repo",
-      description: "Cummulative collection of Android topics and code.",
-      imgUrl: projImg2,
-      url: "https://github.com/likhithharish/Android",
+      title: "Optimized ML Algorithms",
+      description:
+        "Implemented GOSDT,an Optimised Decision Tree algorithm and FP-Growth algorithm from scratch without using any existing libraries.",
+      imgUrl: ml,
+      url: "https://github.com/likhithharish/DecisionTree_Induction_Algorithm",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-      url: "",
+      title: "Image Processing",
+      description:
+        "A collection of various image processing techniques such as watermark removal, transformation, interpolation, noise reduction.",
+      imgUrl: imageproc,
+      url: "https://github.com/likhithharish/ImageProcessing",
     },
   ];
 
@@ -72,7 +76,9 @@ export const Projects = () => {
                     <Nav.Link eventKey="first">Software Development</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">AI & Image Processing</Nav.Link>
+                    <Nav.Link eventKey="second">
+                      AI, ML & Image Processing
+                    </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="third">Misc.</Nav.Link>
@@ -95,10 +101,12 @@ export const Projects = () => {
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Cumque quam, quod neque provident velit, rem explicabo
-                      excepturi id illo molestiae blanditiis, eligendi dicta
-                      officiis asperiores delectus quasi inventore debitis quo.
+                      Talking Tiny Embedded Cognitive Architecture: An academic
+                      project, Connected two PSoCs with various sensing devices
+                      and established communication using a microphone and
+                      speaker. An optimized learning algorithm programmed in C++
+                      is implemented so that both PSoC can communicate and learn
+                      each other sensor values.
                     </p>
                   </Tab.Pane>
                 </Tab.Content>
@@ -107,11 +115,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img
-        className="background-image-right"
-        src={colorSharp2}
-        alt="back"
-      ></img>
     </section>
   );
 };

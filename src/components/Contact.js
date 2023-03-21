@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/connect.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import emailjs from "@emailjs/browser";
+import { Send } from "react-bootstrap-icons";
 
 export const Contact = () => {
+  const form = useRef();
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -15,7 +18,13 @@ export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
-
+  const [isAlertVisible, setIsAlertVisible] = useState(false);
+  const handleButtonClick = () => {
+    setIsAlertVisible(true);
+    setTimeout(() => {
+      setIsAlertVisible(false);
+    }, 3000);
+  };
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
@@ -26,24 +35,30 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Something went wrong, please try again later.",
-      });
-    }
+    emailjs
+      .sendForm(
+        "service_fs30swa",
+        "template_x16j7qt",
+        form.current,
+        "sukyjZgriJwvR0Z8g"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus({ succes: true, message: "Message sent successfully." });
+          setButtonText("Send");
+          setFormDetails(formInitialDetails);
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus({
+            succes: true,
+            message: "Something went wrong, please try again later.",
+          });
+          setButtonText("Send");
+          setFormDetails(formInitialDetails);
+        }
+      );
   };
 
   return (
@@ -72,46 +87,54 @@ export const Contact = () => {
                   }
                 >
                   <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
+                  <form ref={form} onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
+                          name="firstName"
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) =>
                             onFormUpdate("firstName", e.target.value)
                           }
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.lasttName}
+                          name="lastName"
+                          value={formDetails.lastName}
                           placeholder="Last Name"
                           onChange={(e) =>
                             onFormUpdate("lastName", e.target.value)
                           }
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="email"
+                          name="email"
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) =>
                             onFormUpdate("email", e.target.value)
                           }
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
+                          name="phone"
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) =>
                             onFormUpdate("phone", e.target.value)
                           }
+                          required
                         />
                       </Col>
                       <Col size={12} className="px-1">
@@ -119,25 +142,17 @@ export const Contact = () => {
                           rows="6"
                           value={formDetails.message}
                           placeholder="Message"
+                          name="message"
                           onChange={(e) =>
                             onFormUpdate("message", e.target.value)
                           }
+                          required
                         ></textarea>
-                        <button type="submit">
+                        <button type="submit" onClick={handleButtonClick}>
                           <span>{buttonText}</span>
                         </button>
+                        {isAlertVisible && <p>{status.message}</p>}
                       </Col>
-                      {status.message && (
-                        <Col>
-                          <p
-                            className={
-                              status.success === false ? "danger" : "success"
-                            }
-                          >
-                            {status.message}
-                          </p>
-                        </Col>
-                      )}
                     </Row>
                   </form>
                 </div>

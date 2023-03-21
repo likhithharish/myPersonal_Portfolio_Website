@@ -8,6 +8,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { MdWork } from "react-icons/md";
 import { IoIosSchool } from "react-icons/io";
+import Records from "../assets/data.json";
 
 export const Work = () => {
   return (
@@ -16,41 +17,32 @@ export const Work = () => {
         <Row>
           <Col size={12}>
             <div className="works-bx wow zooomIn">
-              <h2>Experiences</h2>
+              <h2>{Records[3].title}</h2>
               <VerticalTimeline lineColor="#3e497a">
                 <VerticalTimelineElement
                   className="vertical-timeline-element--education"
-                  date="Sep.2019 - Jun.2022"
+                  date={Records[3].date1}
                   dateClassName="firstDate"
                   icon={<MdWork />}
                   iconStyle={{ background: "#3e497a", color: "#fff" }}
                 >
                   <h1 className="vertical-timeline-element-title">
-                    Tata Consultancy Services
+                    {Records[3].exp1}
                   </h1>
-                  <h3>Senior Software Engineer</h3>
-                  <p>
-                    A full stack developer, handled projects in Android and Web.
-                    Gained strong expertise in designing banking and financial
-                    applications. My Strong suit included writing clean, crisp
-                    code with less redundancy.
-                  </p>
+                  <h3>{Records[3].role1}</h3>
+                  <p>{Records[3].desc1}</p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--education"
-                  date="May.2018 - Oct.2018"
+                  date={Records[3].date2}
                   icon={<IoIosSchool />}
                   iconStyle={{ background: "#3e497a", color: "#fff" }}
                 >
                   <h1 className="vertical-timeline-element-title">
-                    Tata Motors
+                    {Records[3].exp2}
                   </h1>
-                  <h3>Machine Learning Intern</h3>
-                  <p>
-                    As an intern, worked on the machine learning project with
-                    focus on acheiving zero defects on assembly by performing
-                    predictive analysis on various sensory data.
-                  </p>
+                  <h3>{Records[3].role2}</h3>
+                  <p>{Records[3].desc2}</p>
                 </VerticalTimelineElement>
               </VerticalTimeline>
             </div>

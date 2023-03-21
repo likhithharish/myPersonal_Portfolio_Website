@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import mobapp from "../assets/img/android.svg";
-import webapp from "../assets/img/program.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { Nav } from "react-bootstrap";
+import Records from "../assets/data.json";
+import mobapp from "../assets/img/android.svg";
+import webapp from "../assets/img/program.svg";
 
 export const Banner = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(200 - Math.random() * 100);
+  const [delta, setDelta] = useState(200 - Math.random() * 50);
   const [index, setIndex] = useState(1);
   const toRotate = ["'Web Developer'", "'Android Developer'"];
   const period = 1000;
@@ -51,7 +52,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(100);
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
@@ -74,9 +75,8 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1>
-                    Hello! I'm <span className="name">Likhith</span>
+                    Hello! I'm <span className="name">{Records[1].name}</span>
                   </h1>
-
                   <h1>
                     <span
                       className="txt-rotate title"
@@ -87,13 +87,7 @@ export const Banner = () => {
                     </span>
                   </h1>
 
-                  <p>
-                    I am a Software Engineer with 3+ years of experience in
-                    Android and Web development and a love for creating
-                    innovative and responsive applications. When I'm not CODING,
-                    you can find me solving rubiks cube, enjoying a cup of
-                    coffee with music and exploring. Also, I'm an Audiophile.
-                  </p>
+                  <p>{Records[1].intropara}</p>
 
                   <p></p>
                   <Nav.Link

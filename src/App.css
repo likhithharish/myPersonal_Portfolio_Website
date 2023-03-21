@@ -237,7 +237,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 .banner .tagline {
@@ -322,6 +321,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 2px;
+  border-style: solid;
 }
 .skill h2 {
 	font-size: 45px;
@@ -354,7 +356,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   position: relative;
 }
 .projects-bx {
@@ -363,6 +365,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 2px;
+  border-style: solid;
 }
 .project h2 {
 	font-size: 45px;
@@ -436,10 +441,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
-  border-color: #ffffff;
-  border-width: 4px;
   width: 380px;
   height: 280px;
+  border-style: solid;
+  border-width: 1px;
 }
 .proj-imgbx::before {
   content: "";
@@ -487,13 +492,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
-.proj-imgbx a {
-  color: #fff;
-}
+
 /************ Projects Css ************/
 .contact {
   background: #151515;;
-  padding: 60px 0 200px 0;
+  padding: 70px 0 50px 0;
+  
 }
 .contact img {
   width: 92%;
@@ -562,9 +566,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+.projecttitle {
+  text-decoration: none;
+  color: #fff;
+}
+
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 100px 0;
+  padding: 0 0 0 0;
   position: relative;
   background: #3f3f3f;
   background-position: center center;
@@ -586,13 +595,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 .footer u {
-  color:rgba(232, 98, 8, 0.5);
+  color: orange;
 }
 
 
 /************ Work Css ************/
 .work {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   position: relative;
 }
 .works-bx {
@@ -601,6 +610,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 40px 40px;
   margin-top: 2px;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 2px;
+  border-style: solid;
 }
 .work h2 {
 	font-size: 45px;

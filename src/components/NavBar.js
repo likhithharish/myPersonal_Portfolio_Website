@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/LH-1.png";
+import logo from "../assets/img/LH-new.png";
 import linkedin from "../assets/img/nav-icon1.svg";
 import github from "../assets/img/git.svg";
 import { HashLink } from "react-router-hash-link";
 import resume from "../assets/Resume.pdf";
 import { BrowserRouter as Router } from "react-router-dom";
-import { navbarData } from "../assets/data.js";
+import Records from "../assets/data.json";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -49,7 +49,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("home")}
               >
-                Home
+                {Records[0].nav1}
               </Nav.Link>
               <Nav.Link
                 href="#skills"
@@ -58,7 +58,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("skills")}
               >
-                Skills
+                {Records[0].nav2}
               </Nav.Link>
               <Nav.Link
                 href="#works"
@@ -67,7 +67,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("works")}
               >
-                Experiences
+                {Records[0].nav3}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -78,7 +78,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-                Projects
+                {Records[0].nav4}
               </Nav.Link>
               <Nav.Link
                 href={resume}
@@ -91,24 +91,16 @@ export const NavBar = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Resume
+                {Records[0].nav5}
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a
-                  href="https://www.linkedin.com/in/likhith-harish/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={linkedin} alt="" />
+                <a href={Records[0].linkedin} target="_blank" rel="noreferrer">
+                  <img src={linkedin} alt="linkedin" />
                 </a>
-                <a
-                  href="https://github.com/likhithharish"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={github} alt="" />
+                <a href={Records[0].github} target="_blank" rel="noreferrer">
+                  <img src={github} alt="github" />
                 </a>
               </div>
               <HashLink to="#connect">
