@@ -49,7 +49,6 @@ export const Skills = () => {
                 {Records[2].desc2}
               </p>
               <Carousel
-                partialVisible={true}
                 responsive={responsive}
                 infinite={true}
                 className="owl-carousel owl-theme skill-slider"

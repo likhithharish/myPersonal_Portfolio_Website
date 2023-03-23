@@ -67,7 +67,7 @@ export const Banner = () => {
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
-            <TrackVisibility once>
+            <TrackVisibility>
               {({ isVisible }) => (
                 <div
                   className={
@@ -82,7 +82,7 @@ export const Banner = () => {
                     <span
                       className="txt-rotate title"
                       dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      data-rotate='[ "Web Developer", "Web Designer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
@@ -107,7 +107,7 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility once>
+            <TrackVisibility>
               {({ isVisible }) => (
                 <div
                   className={

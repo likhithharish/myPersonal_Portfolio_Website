@@ -66,7 +66,7 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <TrackVisibility once>
+            <TrackVisibility>
               {({ isVisible }) => (
                 <img
                   className={
@@ -86,7 +86,7 @@ export const Contact = () => {
                     isVisible ? "animate__animated animate__fadeIn" : isVisible
                   }
                 >
-                  <h2>Get In Touch</h2>
+                  <h2>Let's Connect</h2>
                   <form ref={form} onSubmit={handleSubmit}>
                     <Row>
                       <Col size={12} sm={6} className="px-1">

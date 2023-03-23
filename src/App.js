@@ -10,6 +10,7 @@ import Particle from "./components/Particle";
 import { Work } from "./components/Work";
 
 function App() {
+  setTimeout(() => window.scrollBy(0, 10), 100);
   return (
     <>
       <Particle />
