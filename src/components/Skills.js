@@ -13,6 +13,7 @@ import git from "../assets/img/skills/git.svg";
 import tensorflow from "../assets/img/skills/tensorflow.svg";
 import "react-multi-carousel/lib/styles.css";
 import Records from "../assets/data.json";
+import Particle from "./Particle";
 
 export const Skills = () => {
   const responsive = {

@@ -25,7 +25,7 @@ export const Projects = () => {
     },
     {
       title: "Food Order Website",
-      description: "Work in Progress",
+      description: "Work in Progress : React, Node, Express and MongoDB",
       imgUrl: projImg3,
       url: "",
     },
@@ -47,7 +47,7 @@ export const Projects = () => {
       url: "https://github.com/likhithharish/DecisionTree_Induction_Algorithm",
     },
     {
-      title: "Image Processing",
+      title: "Advanced Image Processing",
       description:
         "A collection of various image processing techniques such as watermark removal, transformation, interpolation, noise reduction.",
       imgUrl: imageproc,
@@ -81,7 +81,7 @@ export const Projects = () => {
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Misc.</Nav.Link>
+                    <Nav.Link eventKey="third">Miscellaneous Projects</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content id="slideInUp" className="">
@@ -101,12 +101,12 @@ export const Projects = () => {
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     <p>
-                      Talking Tiny Embedded Cognitive Architecture: An academic
-                      project, Connected two PSoCs with various sensing devices
-                      and established communication using a microphone and
-                      speaker. An optimized learning algorithm programmed in C++
-                      is implemented so that both PSoC can communicate and learn
-                      each other sensor values.
+                      <b>Talking Tiny Embedded Cognitive Architecture:</b> An
+                      academic project, Connected two PSoCs with various sensing
+                      devices and established communication using a microphone
+                      and speaker. An optimized learning algorithm programmed in
+                      C++ is implemented so that both PSoC can communicate and
+                      learn each other sensor values.
                     </p>
                   </Tab.Pane>
                 </Tab.Content>

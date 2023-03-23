@@ -7,6 +7,7 @@ import { Nav } from "react-bootstrap";
 import Records from "../assets/data.json";
 import mobapp from "../assets/img/android.svg";
 import webapp from "../assets/img/program.svg";
+import Particle from "./Particle";
 
 export const Banner = () => {
   const [activeLink, setActiveLink] = useState("home");

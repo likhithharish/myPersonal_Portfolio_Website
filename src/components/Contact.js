@@ -151,6 +151,7 @@ export const Contact = () => {
                         <button type="submit" onClick={handleButtonClick}>
                           <span>{buttonText}</span>
                         </button>
+                        <p></p>
                         {isAlertVisible && <p>{status.message}</p>}
                       </Col>
                     </Row>
