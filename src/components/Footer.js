@@ -15,8 +15,17 @@ import Records from "../assets/data.json";
 
 export const Footer = () => {
   const [activeLink, setActiveLink] = useState("home");
+  const [visitorCount, setVisitorCount] = useState();
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+  };
+
+  const countVisits = () => {
+    fetch(
+      "https://api.countapi.xyz/update/portfolio-website/asdfghjkl?amount=1"
+    )
+      .then((res) => res.json())
+      .then((res) => setVisitorCount(res.value));
   };
 
   return (
@@ -64,6 +73,7 @@ export const Footer = () => {
             <img src={coding} />
 
             <p>Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
+            <p>Visitor Count: {visitorCount}</p>
           </Col>
         </Row>
       </Container>

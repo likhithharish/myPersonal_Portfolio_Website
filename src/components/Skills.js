@@ -54,7 +54,7 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
                 autoPlaySpeed={1000}
               >
-                <div className="item">
+                <div className="item" loading="lazy">
                   <img src={java} alt="Image" />
                   <h5>{Records[2].s1}</h5>
                 </div>
