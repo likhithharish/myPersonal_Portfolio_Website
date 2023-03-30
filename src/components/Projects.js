@@ -24,10 +24,10 @@ export const Projects = () => {
       url: "https://github.com/likhithharish/Android",
     },
     {
-      title: "Food Order Website",
+      title: "User Networking Site",
       description: "Work in Progress : React, Node, Express and MongoDB",
       imgUrl: projImg3,
-      url: "",
+      url: "https://github.com/likhithharish/User-NetWorking-Site",
     },
   ];
 
