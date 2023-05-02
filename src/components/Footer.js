@@ -73,7 +73,6 @@ export const Footer = () => {
             <img src={coding} />
 
             <p>Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
-            <p>Visitor Count: {visitorCount}</p>
           </Col>
         </Row>
       </Container>
