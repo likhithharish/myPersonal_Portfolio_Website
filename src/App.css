@@ -297,8 +297,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner img {
   animation: updown 3s linear infinite;
-  width: 500px;
-  height: 500px;
+  width:500px;
+  height: 300px;
 }
 @keyframes updown {
     0% {
@@ -322,7 +322,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 /************ Skills Css ************/
 .skill {
-  padding: 50px 0 50px 0;
+  padding: 80px 0 50px 0;
   position: relative;
 }
 .skill-bx {
