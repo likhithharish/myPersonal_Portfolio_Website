@@ -6,6 +6,7 @@ import projImg3 from "../assets/img/wip.svg";
 import restloc from "../assets/img/recommendationloc.svg";
 import imageproc from "../assets/img/imageproc.svg";
 import ml from "../assets/img/ml.svg";
+import fileshare from "../assets/img/fileshare.svg";
 import "animate.css";
 
 export const Projects = () => {
@@ -28,6 +29,13 @@ export const Projects = () => {
       description: "Work in Progress : React, Node, Express and MongoDB",
       imgUrl: projImg3,
       url: "https://github.com/likhithharish/User-NetWorking-Site",
+    },
+    {
+      title: "File Sharing Site",
+      description:
+        "File sharing application developed with React, Node, Express and MongoDB",
+      imgUrl: fileshare,
+      url: "https://github.com/likhithharish/file-sharing-site",
     },
   ];
 
