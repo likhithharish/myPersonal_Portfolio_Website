@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/LH-new.png";
 import linkedin from "../assets/img/nav-icon1.svg";
 import github from "../assets/img/git.svg";
 import { HashLink } from "react-router-hash-link";
@@ -83,9 +82,7 @@ export const NavBar = () => {
               <Nav.Link
                 href={resume}
                 className={
-                  activeLink === { resume }
-                    ? "active navbar-link"
-                    : "navbar-link"
+                  activeLink === resume ? "active navbar-link" : "navbar-link"
                 }
                 onClick={() => onUpdateActiveLink({ resume })}
                 target="_blank"

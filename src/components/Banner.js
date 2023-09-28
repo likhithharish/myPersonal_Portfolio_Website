@@ -7,7 +7,6 @@ import { Nav } from "react-bootstrap";
 import Records from "../assets/data.json";
 import mobapp from "../assets/img/android.svg";
 import webapp from "../assets/img/program.svg";
-import Particle from "./Particle";
 
 export const Banner = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -15,7 +14,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(200 - Math.random() * 50);
-  const [index, setIndex] = useState(1);
+  //const [index, setIndex] = useState(1);
   const toRotate = ["'Web Developer'", "'Android Developer'"];
   const period = 1000;
   const [imagesrc, setImgSrc] = useState("");
@@ -29,7 +28,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text, delta]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -47,17 +46,18 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
+      //setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
+      //setIndex(1);
       setDelta(100);
     } else {
-      setIndex((prevIndex) => prevIndex + 1);
+      //setIndex((prevIndex) => prevIndex + 1);
     }
   };
+
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };

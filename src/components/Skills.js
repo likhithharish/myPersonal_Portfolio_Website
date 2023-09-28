@@ -13,7 +13,6 @@ import git from "../assets/img/skills/git.svg";
 import tensorflow from "../assets/img/skills/tensorflow.svg";
 import "react-multi-carousel/lib/styles.css";
 import Records from "../assets/data.json";
-import Particle from "./Particle";
 
 export const Skills = () => {
   const responsive = {
@@ -55,51 +54,51 @@ export const Skills = () => {
                 autoPlaySpeed={1000}
               >
                 <div className="item" loading="lazy">
-                  <img src={java} alt="Image" />
+                  <img src={java} alt="rec1" />
                   <h5>{Records[2].s1}</h5>
                 </div>
                 <div className="item">
-                  <img src={python} alt="Image" />
+                  <img src={python} alt="rec1" />
                   <h5>{Records[2].s2}</h5>
                 </div>
                 <div className="item">
-                  <img src={kotlin} alt="Image" />
+                  <img src={kotlin} alt="rec1" />
                   <h5>{Records[2].s3}</h5>
                 </div>
                 <div className="item">
-                  <img src={react} alt="Image" />
+                  <img src={react} alt="rec1" />
                   <h5>{Records[2].s4}</h5>
                 </div>
                 <div className="item">
-                  <img src={sql} alt="Image" />
+                  <img src={sql} alt="rec1" />
                   <h5>{Records[2].s5}</h5>
                 </div>
                 <div className="item">
-                  <img src={html} alt="Image" />
+                  <img src={html} alt="rec1" />
                   <h5>{Records[2].s6}</h5>
                 </div>
                 <div className="item">
-                  <img src={css} alt="Image" />
+                  <img src={css} alt="rec1" />
                   <h5>{Records[2].s7}</h5>
                 </div>
                 <div className="item">
-                  <img src={javascript} alt="Image" />
+                  <img src={javascript} alt="rec1" />
                   <h5>{Records[2].s8}</h5>
                 </div>
                 <div className="item">
-                  <img src={typescript} alt="Image" />
+                  <img src={typescript} alt="rec1" />
                   <h5>{Records[2].s9}</h5>
                 </div>
                 <div className="item">
-                  <img src={bootstrap} alt="Image" />
+                  <img src={bootstrap} alt="rec1" />
                   <h5>{Records[2].s10}</h5>
                 </div>
                 <div className="item">
-                  <img src={git} alt="Image" />
+                  <img src={git} alt="rec1" />
                   <h5>{Records[2].s11}</h5>
                 </div>
                 <div className="item">
-                  <img src={tensorflow} alt="Image" />
+                  <img src={tensorflow} alt="rec1" />
                   <h5>{Records[2].s12}</h5>
                 </div>
               </Carousel>

@@ -4,7 +4,6 @@ import contactImg from "../assets/img/connect.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import emailjs from "@emailjs/browser";
-import { Send } from "react-bootstrap-icons";
 
 export const Contact = () => {
   const form = useRef();

@@ -4,28 +4,14 @@ import github from "../assets/img/git.svg";
 import { Nav } from "react-bootstrap";
 import { useState } from "react";
 import coding from "../assets/img/coding.svg";
-import {
-  FaReact,
-  FaCloudflare,
-  FaLinkedin,
-  FaGithubSquare,
-} from "react-icons/fa";
+import { FaReact, FaCloudflare } from "react-icons/fa";
 import { BsFiletypeScss, BsBootstrapFill } from "react-icons/bs";
-import Records from "../assets/data.json";
 
 export const Footer = () => {
   const [activeLink, setActiveLink] = useState("home");
-  const [visitorCount, setVisitorCount] = useState();
+
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  };
-
-  const countVisits = () => {
-    fetch(
-      "https://api.countapi.xyz/update/portfolio-website/asdfghjkl?amount=1"
-    )
-      .then((res) => res.json())
-      .then((res) => setVisitorCount(res.value));
   };
 
   return (
@@ -70,7 +56,7 @@ export const Footer = () => {
                 <img src={github} alt="" />
               </a>
             </div>
-            <img src={coding} />
+            <img src={coding} alt="Coding" />
 
             <p>Copyright {new Date().getFullYear()}. All Rights Reserved.</p>
           </Col>
